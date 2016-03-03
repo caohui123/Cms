@@ -132,7 +132,7 @@ opifer_media_admin:
     resource: "@OpiferMediaBundle/Resources/config/routing.yml"
 
 fos_user_security_login:
-    pattern:  /login
+    path:  /login
     defaults: { _controller: FOSUserBundle:Security:login }
 
 fos_user_group:

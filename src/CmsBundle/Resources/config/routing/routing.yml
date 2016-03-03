@@ -8,12 +8,12 @@ fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
 
 fos_user_security_check:
-    pattern: /login_check
+    path: /login_check
     defaults: { _controller: FOSUserBundle:Security:check }
     methods: [POST]
 
 fos_user_security_logout:
-    pattern: /logout
+    path: /logout
     defaults: { _controller: FOSUserBundle:Security:logout }
 
 _bazinga_jstranslation:
@@ -22,7 +22,7 @@ _bazinga_jstranslation:
 # Opifer bundle routing
 
 opifer_cms_exception_404:
-    pattern: /404
+    path: /404
     defaults: { _controller: OpiferCmsBundle:Frontend\Exception:error404 }
     methods: [GET]
 
@@ -30,7 +30,7 @@ opifer_form:
     resource: "@OpiferFormBundle/Resources/config/routing.yml"
 
 opifer_cms_home:
-    pattern:  /
+    path:  /
     defaults: { _controller: OpiferCmsBundle:Frontend\Content:home }
     options: {sitemap: true}
 
@@ -41,7 +41,7 @@ opifer_cms_auto_complete:
         expose: true
 
 opifer_cms_login:
-    pattern:  /login
+    path:  /login
     defaults: { _controller: FOSUserBundle:Security:login }
 
 PrestaSitemapBundle:
@@ -55,7 +55,7 @@ fos_user_register:
     prefix:   /register
 
 fos_user_change_password:
-    pattern:  /change-password
+    path:  /change-password
     defaults: { _controller: FOSUserBundle:ChangePassword:changePassword }
     methods:  [GET,POST]
 

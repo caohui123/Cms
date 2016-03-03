@@ -10,6 +10,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\Form\FormInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -265,6 +266,15 @@ abstract class AbstractBlockService
     public function getManageFormTypeName()
     {
         return 'default';
+    }
+
+    /**
+     * @param Request $request
+     * @param BlockInterface|null $block
+     */
+    public function handleRequest(Request $request, BlockInterface $block = null)
+    {
+
     }
 
     /**
